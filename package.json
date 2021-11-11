@@ -1,6 +1,6 @@
 {
   "name": "lowcode-controller",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a low-code controller util, you can use json write your controller code",
   "keywords": ["lowcode controller", "lowcode", "controller"],
   "main": "index.js",
@@ -9,7 +9,7 @@
     "test": "mocha ./test/*.test.js",
     "lint": "eslint ./ --fix"
   },
-  "author": "",
+  "author": "wrfighting",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.21",

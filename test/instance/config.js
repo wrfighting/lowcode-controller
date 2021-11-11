@@ -2,9 +2,9 @@ module.exports = {
     mysql_options: {
         dataBase: 'json-controller-test',
         account: 'root',
-        pwd: 'admin123!Mysql',
+        pwd: 'mysql',
         options: {
-            host: '81.68.156.53',
+            host: '127.0.0.1',
             port: 3306,
             dialect: 'mysql',
             dialectOptions: {
