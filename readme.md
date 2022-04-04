@@ -18,8 +18,9 @@ const { LowCodeController } = require('lowcode-controller')
 const cats_model = require('../model/cat_model')
 const path = require('path')
 
-LowCodeController.setGlobalDBPath(path.join(__dirname, '../db/mysql'))
-LowCodeController.setUserNameField('username')
+LowCodeController.setGlobalDBPath(path.join(__dirname, '../db/mysql')) // 设置数据库文件
+LowCodeController.setUserNameField('username') // 可以设置用户名的字段key
+LowCodeController.setCustomResField('code', 'msg', 'data') // 允许自定义返回的字段key，默认是 { errno: 0, errmsg: 'success', data: null }
 
 class CatsController extends LowCodeController {
     constructor(model, config, db, extraOptions) {
@@ -178,6 +179,14 @@ const server = app.listen(3000, function () {
 | 参数名 | 说明                                               |
 | ------ | -------------------------------------------------- |
 | field  | 设置从ctx里取出的用户唯一表示字段，支持xxx.xxx形式 |
+
+#### setCustomResField
+
+| 参数名 | 说明              |
+| ------ | ----------------- |
+| code   | code对应的字段key |
+| msg    | msg对应的字段key  |
+| data   | data对应的字段key |
 
 ### 实例方法
 

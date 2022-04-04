@@ -12,6 +12,7 @@ describe('cats api test', function () {
                 .end(function (err, res) {
                     if (err) return done(err)
                     const { errno, data } = res.body
+                    console.log(res.body)
                     should.equal(errno, 0)
                     should.equal(data, 'hello world')
                     done()
@@ -46,6 +47,7 @@ describe('cats api test', function () {
                 .end(function (err, res) {
                     if (err) return done(err)
                     const body = res.body
+                    console.log(res.body)
                     should.equal(body.errno, 0)
                     body.should.be.have.property('data')
                     catId = body.data.id
@@ -64,6 +66,7 @@ describe('cats api test', function () {
                 .end(function (err, res) {
                     if (err) return done(err)
                     const body = res.body
+                    console.log(res.body)
                     should.equal(body.errno, 0)
                     done()
                 })
@@ -77,6 +80,7 @@ describe('cats api test', function () {
                 .end(function (err, res) {
                     if (err) return done(err)
                     const body = res.body
+                    console.log(res.body)
                     should.equal(body.errno, 0)
                     body.should.be.have.property('data')
                     should.equal(body.data[0].desc, 'cute cat')
@@ -95,6 +99,7 @@ describe('cats api test', function () {
                 .end(function (err, res) {
                     if (err) return done(err)
                     const body = res.body
+                    console.log(res.body)
                     should.equal(body.errno, 1)
                     done()
                 })
@@ -111,6 +116,7 @@ describe('cats api test', function () {
                 .end(function (err, res) {
                     if (err) return done(err)
                     const body = res.body
+                    console.log(res.body)
                     should.equal(body.errno, 0)
                     done()
                 })
@@ -124,6 +130,7 @@ describe('cats api test', function () {
                 .end(function (err, res) {
                     if (err) return done(err)
                     const body = res.body
+                    console.log(res.body)
                     should.equal(body.errno, 0)
                     should.equal(body.data.id, catId)
                     should.equal(body.data.job, 'student')
@@ -139,6 +146,7 @@ describe('cats api test', function () {
                 .end(function (err, res) {
                     if (err) return done(err)
                     const body = res.body
+                    console.log(res.body)
                     should.equal(body.errno, 0)
                     done()
                 })
