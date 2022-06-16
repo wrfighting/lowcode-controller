@@ -244,7 +244,7 @@ const server = app.listen(3000, function () {
 | 参数名          | 类型                                                         | 说明                                                         |
 | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | query           | Object                                                       | 查询条件，具体字段见后面的说明                               |
-| beforeQueryHook | function\|async function(ctx, query, extraOptions)           | 在执行数据库查询之前执行，函数里return将会阻断后续执行       |
+| beforeQueryHook | function\|async function( query, extraOptions, ctx)          | 在执行数据库查询之前执行，函数里return将会阻断后续执行       |
 | afterQueryHook  | function\|async function(sourceResults, query, extraOptions, ctx) | 在执行数据库查询之后执行，函数里return的值将会作为最后的接口data的返回结果  sourceResults是从数据库查出来的数据 |
 | filter          | function                                                     | 查询数据库后，将结果放到filter函数执行过滤操作               |
 | extraOptions    | Object                                                       | 额外设置，会透传给sequelize执行                              |
