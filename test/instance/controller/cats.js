@@ -4,7 +4,7 @@ const path = require('path')
 
 LowCodeController.setGlobalDBPath(path.join(__dirname, '../db/mysql'))
 LowCodeController.setUserNameField('username')
-LowCodeController.setCustomResField('code', 'msg', 'data')
+// LowCodeController.setCustomResField('code', 'msg', 'data')
 
 class CatsController extends LowCodeController {
     constructor(model, config, db, extraOptions) {
@@ -22,7 +22,7 @@ const Cats = new CatsController(
         pageQuery: {
             query: {
                 cat_name: {
-                    like: true,
+                    // like: true,
                     value: 'cat_name',
                 },
                 age: {

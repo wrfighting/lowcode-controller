@@ -60,6 +60,6 @@ const Cats = sq.define(
     }
 )
 
-Cats.sync()
+// Cats.sync()
 
 module.exports = Cats
