@@ -1,6 +1,6 @@
 {
   "name": "lowcode-controller",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "a low-code controller util, you can use json write your controller code",
   "keywords": ["lowcode controller", "lowcode", "controller"],
   "main": "index.js",
